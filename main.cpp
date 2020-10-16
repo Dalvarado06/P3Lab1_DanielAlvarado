@@ -156,9 +156,11 @@ int menu() {
         cout << "       Menu        \n"
                 << "1. Calcular el valor de la funcion Sigmoide \n"
                 << "2. Aproximacion del valor de Pi \n"
-                << "3. Salir del programa \n";
+                << "3. Salir del programa \n"
+                << "Ingrese una opcion: ";
         cin >> opcion;
         cout << endl;
+        
 
         if (opcion < 1 || opcion > 3) {
 
