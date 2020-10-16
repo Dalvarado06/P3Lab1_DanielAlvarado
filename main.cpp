@@ -58,8 +58,7 @@ int main(int argc, char** argv) {
                 
                 double resultado = aproximacionPi(limite);
                 
-                cout << "El resultado de la aproximacion es: " <<showpoint
-                        <<fixed <<setprecision(4) <<resultado <<endl;
+                cout << "El resultado de la aproximacion es: " <<resultado <<endl;
                 
                 break;
                 
@@ -77,7 +76,7 @@ int main(int argc, char** argv) {
 //Calcula el valor de la funcion sigmoide dada el valor de x
 double sigmoide(int valorX){
     
-    int numerador = 1;
+    double numerador = 1;
     
     double e = 2.718;
     double elevadoE = 1;
@@ -102,16 +101,16 @@ double aproximacionPi(int limite){
     
     double result = 0;
     
-    for(int n = 0; n < limite; n++){
+    for(int n = 0; n <= limite; n++){
         
-        int potNum = 1;
+        double potNum = 1;
         
-        for(int j = 0; j < limite; j++){
+        for(int j = 0; j < n; j++){
             potNum *= -1;
         }
         
         
-        int denominador = (2*n) + 1;
+        double denominador = (2* (double)n) + 1;
         
         result += potNum / denominador;
     }
@@ -132,6 +131,7 @@ int menu(){
              << "2. Aproximacion del valor de Pi \n"
              << "3. Salir del programa \n";   
         cin >> opcion;
+        cout << endl;
         
         if(opcion < 1 || opcion > 3){
             
