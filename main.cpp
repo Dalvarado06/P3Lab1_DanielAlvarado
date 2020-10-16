@@ -62,14 +62,16 @@ int main(int argc, char** argv) {
 
                 double resultado = aproximacionPi(limite);
 
-                cout << "El resultado de la aproximacion es: " << resultado 
-                        << endl <<endl;
+                cout << "El resultado de la aproximacion es: " << resultado
+                        << endl << endl;
 
                 break;
 
-            }case 3: {
-                
-                cout << "Ha decidido salir del sistema..." <<endl <<endl;
+            }
+            case 3:
+            {
+
+                cout << "Ha decidido salir del sistema..." << endl << endl;
             }
 
 
@@ -90,17 +92,24 @@ double sigmoide(int valorX) {
     double e = 2.718;
     double elevadoE = 1;
 
-    if (valorX >= 0) { 
+    valorX *= -1;
+
+    if (valorX >= 0) {
         for (int i = 0; i < valorX; i++) {
             elevadoE *= e;
         }
-    }else if(valorX < 0){
-        for (int i = 0; i > valorX; i--){
+    } else if (valorX < 0) {
+        for (int i = 0; i > valorX; i--) {
             elevadoE *= e;
         }
     }
 
-    double resultE = (double) 1 / elevadoE;
+    double resultE = 0;
+    if (valorX < 0) {
+        resultE = (double) 1 / elevadoE;
+    } else {
+        resultE = elevadoE;
+    }
     cout << resultE << endl;
 
     double denominador = numerador + resultE;
