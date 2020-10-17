@@ -110,7 +110,6 @@ double sigmoide(int valorX) {
     } else {
         resultE = elevadoE;
     }
-    cout << resultE << endl;
 
     double denominador = numerador + resultE;
 
@@ -164,7 +163,7 @@ int menu() {
 
         if (opcion < 1 || opcion > 3) {
 
-            cout << "La opcion es incorrecta intente de nuevo! \n";
+            cout << "La opcion es incorrecta intente de nuevo! \n\n";
         }
 
 
